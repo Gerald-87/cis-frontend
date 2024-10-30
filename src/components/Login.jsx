@@ -1,7 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    // Function to handle form submission and navigate to Dashboard
+    const handleLogin = (event) => {
+        event.preventDefault();
+        // Add login validation logic here if needed
+        navigate('/dashboard'); // Navigate to Dashboard on successful login
+    };
+
     return (
         <div className="body">
             <div className="login-container">
@@ -14,7 +24,7 @@ const Login = () => {
                         <p className="subtitle">Secure Access Portal</p>
                     </div>
 
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div className="form-group">
                             <label className="form-label">Badge Number / Email</label>
                             <div className="input-group">
@@ -47,10 +57,12 @@ const Login = () => {
                                 <input type="checkbox" />
                                 <span>Remember me</span>
                             </label>
-                            <a href="#" className="forgot-password">Forgot password?</a>
+                            <button type="button" className="forgot-password" onClick={() => alert('Forgot password clicked')}>
+                                Forgot password?
+                            </button>
                         </div>
 
-                        <button type="button" className="btn btn-primary">Sign In</button>
+                        <button type="submit" className="btn btn-primary">Sign In</button>
 
                         <div className="divider">
                             <span>or</span>
@@ -62,7 +74,11 @@ const Login = () => {
                         </button>
 
                         <div className="form-footer">
-                            <p>Technical issues? <a href="#">Contact Support</a></p>
+                            <p>Technical issues? 
+                                <button type="button" onClick={() => alert('Contact support clicked')}>
+                                    Contact Support
+                                </button>
+                            </p>
                         </div>
                     </form>
                 </div>

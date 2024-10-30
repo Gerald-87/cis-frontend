@@ -1,6 +1,6 @@
+// Dashboard.jsx
 import React from 'react';
 import './Dashboard.css';
-
 
 function Dashboard() {
   return (
@@ -51,8 +51,7 @@ function Dashboard() {
         <div className="dashboard-header">
           <h2>Dashboard Overview</h2>
           <button className="btn btn-primary">
-            <i className="fas fa-plus"></i>
-            New Case
+            <i className="fas fa-plus"></i> New Case
           </button>
         </div>
 
@@ -67,7 +66,6 @@ function Dashboard() {
               <div className="stat-subtext">32 active</div>
             </div>
           </div>
-
           {/* Repeat similar structure for other stat-cards */}
         </div>
 
@@ -89,12 +87,11 @@ function Dashboard() {
                   <td>Security Breach Investigation</td>
                   <td><span className="badge badge-high">High</span></td>
                   <td>Active</td>
-                </tr>Dashboard
+                </tr>
                 {/* Additional rows here */}
               </tbody>
             </table>
           </div>
-          
           {/* Repeat similar structure for other cards */}
         </div>
       </main>
